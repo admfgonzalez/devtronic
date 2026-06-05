@@ -46,11 +46,41 @@ const headerScroll = () => {
     });
 }
 
-// Form Submission handling (placeholder)
+// Form Submission handling (AJAX)
 const handleForm = () => {
     const form = document.querySelector('.contact-form');
-    // Dejamos que el navegador maneje el envío a Formspree directamente
-    // Si quisieras manejarlo con AJAX (sin recargar página), se implementaría aquí
+    if (!form) return;
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault(); // Evita que se abra una nueva página
+
+        const formData = new FormData(form);
+        const submitBtn = form.querySelector('button');
+        const originalBtnText = submitBtn.innerText;
+
+        try {
+            // Cambio visual de estado
+            submitBtn.innerText = 'Enviando...';
+            submitBtn.disabled = true;
+
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors' // Necesario para Google Apps Script si no configuramos CORS avanzado
+            });
+
+            // Con no-cors no podemos leer la respuesta, pero si no hay error asumimos éxito
+            alert('¡Gracias! Hemos recibido tu mensaje y te contactaremos pronto.');
+            form.reset();
+
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Lo sentimos, hubo un error al enviar el mensaje. Por favor intenta de nuevo.');
+        } finally {
+            submitBtn.innerText = originalBtnText;
+            submitBtn.disabled = false;
+        }
+    });
 }
 
 const app = () => {
