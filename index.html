@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devtronic - Desarrollo de Software y Electrónica</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="devtronic.jpeg" alt="Devtronic Logo">
+                <span>Devtronic</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container hero-content">
+                <h1>Impulsando el Futuro con Software y Electrónica</h1>
+                <p>Soluciones tecnológicas integrales para llevar tu negocio al siguiente nivel.</p>
+                <div class="hero-btns">
+                    <a href="#contacto" class="btn btn-primary">Contáctanos</a>
+                    <a href="#servicios" class="btn btn-secondary">Nuestros Servicios</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="nosotros" class="about section-padding">
+            <div class="container">
+                <h2 class="section-title">Sobre Nosotros</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h3>Nuestra Aspiración</h3>
+                        <p>En Devtronic, no solo creamos tecnología; aspiramos a <strong>llevar la industria de manufactura de hardware al siguiente nivel</strong>.</p>
+                        <p>Combinamos la potencia del desarrollo de software moderno con la precisión de la ingeniería electrónica para crear ecosistemas tecnológicos robustos y escalables.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="services section-padding">
+            <div class="container">
+                <h2 class="section-title">Servicios</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="icon">💻</div>
+                        <h3>Desarrollo de Software</h3>
+                        <p>Aplicaciones web, móviles y sistemas a medida diseñados para la máxima eficiencia y escalabilidad.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">🔌</div>
+                        <h3>Proyectos Electrónicos</h3>
+                        <p>Diseño de hardware, IoT y automatización industrial con los más altos estándares de calidad.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">📊</div>
+                        <h3>Consultoría IT</h3>
+                        <p>Asesoría estratégica para integrar tecnología en tus procesos de negocio y manufactura.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portafolio" class="portfolio section-padding">
+            <div class="container">
+                <h2 class="section-title">Portafolio</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="portfolio-img">
+                            <img src="isptorrecontrol.png" alt="ISP Torre Control">
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>ISP Torre Control</h3>
+                            <p>Sistema avanzado de gestión y monitoreo para proveedores de servicios de internet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact section-padding">
+            <div class="container">
+                <h2 class="section-title">Contacto</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h3>Hablemos de tu proyecto</h3>
+                        <p>¿Tienes una idea innovadora o un reto tecnológico? Estamos listos para ayudarte.</p>
+                        <ul class="contact-list">
+                            <li>📧 contacto@devtronic.com</li>
+                            <!-- <li>📞 +56 9 6707 7911</li> -->
+                            <li>📍 Santiago, Chile</li>
+                        </ul>
+                    </div>
+                    <form action="https://formspree.io/f/contacto@devtronic.com" method="POST" class="contact-form">
+                        <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                        <input type="email" name="email" placeholder="Tu Email" required>
+                        <textarea name="mensaje" rows="5" placeholder="Tu Mensaje" required></textarea>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Devtronic. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
